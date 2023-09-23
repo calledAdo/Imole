@@ -3,29 +3,43 @@
 pragma solidity ^0.8.18;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "./Sigvalidation.sol"
 
 
 contract Imole {
     using SigValidation for bytes;
-
+  
+   //admin address for verifying withdrawal;
     address _admin;
+
+   //a counter to keep track of the number of art's listed
+   // and to map uinque numbers to each art;
     uint _art_Count;
+
+   //contract address for payment token :A stablecoin is most suitable
     address paymentToken;
 
+
+
+  // each ART contaims 
+  //         _ART_NFT :contract address of the NFT attached to it 
+  //         _ART_ROYALTY:assigned by art owner upon adding ART ,represents payPerStream;
     struct ART {
         address _ART_NFT;
         uint _ART_ROYALTY;
     }
 
+  //a mapping of a unique number to all arts added useful for getting ART
     mapping(uint => ART) public art_ID;
 
+
+ //admin address set on constructor;
     constructor(address admin) {
         _admin = admin;
     }
 
+ //returns particular ART mapped to that number(_ID)
     function getART(uint _ID) external view returns (address) {
         return art_ID[_ID];
     }
