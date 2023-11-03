@@ -1,5 +1,5 @@
-- 👋 Hi, I’m @calledAdo
-- 👀 I’m interested in ... web3 development
+- 👋 Hi, I’m @calledAdo(Adokiye Okoro Destiny)
+- 👀 I’m interested in ... blockchain and front-end development
 - 💞️ I’m looking to collaborate on ...web3 projects and startups(You got any Idea ,lets Build)
 - 📫 How to reach me ...destinyadokiye8@gmail.com
 
